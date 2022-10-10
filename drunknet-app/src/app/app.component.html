@@ -1,0 +1,11 @@
+
+<div>
+    <span>DrunkApp.net - Drink like a drunk</span>
+    <app-auth></app-auth>
+</div>
+
+<app-profile></app-profile>
+<app-bac></app-bac>
+<app-drink *ngIf="this.auth.isAuthenticated$ | async"></app-drink>
+<app-toplist *ngIf="this.auth.isAuthenticated$ | async"></app-toplist>
+<app-drinklist *ngIf="this.auth.isAuthenticated$ | async"></app-drinklist>

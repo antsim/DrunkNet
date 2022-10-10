@@ -1,0 +1,7 @@
+<div *ngIf="topList.length > 0">
+    <div mat-subheader>Top Drunks (as of {{ refreshedAt | date: 'short' }})</div>
+    <ol>
+        <li *ngFor="let drunk of topList; let i = index">{{ drunk.name }} {{ drunk.bac }}</li>
+    </ol>
+</div>
+

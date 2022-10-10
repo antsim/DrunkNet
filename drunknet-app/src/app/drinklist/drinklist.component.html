@@ -1,0 +1,4 @@
+<h1>My drinks</h1>
+<ul *ngFor="let drink of drinks">
+    <li>{{ drink.timeConsumed | date: 'short' }} {{ drink.drinkAmount }} dl {{ drink.alcoholContent }} % <a href="javascript: void(0);" (click)="deleteDrink(drink)">delete</a></li>
+</ul>

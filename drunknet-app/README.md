@@ -1,0 +1,3 @@
+# build
+
+ng build --watch

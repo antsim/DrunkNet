@@ -1,0 +1,26 @@
+<div *ngIf="mustUpdateProfile" width="500">
+    <form (ngSubmit)="onSubmitUpdateProfile()">
+      <div>
+        <label for="userName">Username</label>
+        <input type="text" id="userName" name="userName" [(ngModel)]="userName" />
+      </div>
+      
+      <div>
+        <label for="weight">
+          Weight: ({{ weight }})
+        </label>
+        <input type="text" name="weight" [(ngModel)]="weight" />
+      </div>
+    
+      <div>
+        <label for="gender">
+          Gender: ({{ gender }})
+        </label>
+        <select [(ngModel)]="gender">
+          <option *ngFor="let g of genderKeys" [value]="g">{{ genders[g] }}</option>
+        </select>
+      </div>      
+
+      <button class="button" type="submit">Update</button>
+    </form>
+  </div>
