@@ -53,11 +53,7 @@ builder.Services.Configure<JsonOptions>(options =>
     options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
 });
 
-builder.Host.ConfigureLogging(logging =>
-{
-    logging.ClearProviders();
-    logging.AddConsole();
-});
+builder.Logging.ClearProviders().AddConsole();
 
 builder.Services.AddSingleton<ILiteDbContext, LiteDbContext>();
 builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
