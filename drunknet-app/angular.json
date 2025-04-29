@@ -25,6 +25,15 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/meanmenu.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/swiper-bundle.css",
+              "src/assets/css/backtotop.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/nice-select.css",
+              "src/assets/css/font-awesome-pro.css",
+              "src/assets/css/spacing.css",
+              "src/assets/css/main.css",
               "src/styles.css"
             ],
             "scripts": []

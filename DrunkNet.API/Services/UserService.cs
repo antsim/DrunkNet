@@ -19,11 +19,13 @@ public class UserService : IUserService
         var col = _db.GetCollection<User>("users");
         var user = col.FindOne(u => u.ExternalAuthId == externalId);
 
-        if (user == null)
+        if (user != null)
         {
-            user = new User {ExternalAuthId = externalId};
-            col.Insert(user);
+            return user.Id;
         }
+        
+        user = new User {ExternalAuthId = externalId};
+        col.Insert(user);
 
         return user.Id;
     }
